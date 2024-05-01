@@ -24,13 +24,11 @@ try:
         stop_row, smiddle_row, sbuttom_row=sec_digits.splitlines()
 
         # now we will display the digits
-
         print(f"{htop_row}      {mtop_row}       {stop_row}")
         print(f"{hmiddle_row}    * {mmiddle_row}     * {smiddle_row}"  )
         print(f"{hbuttom_row}    * {mbuttom_row}     * {sbuttom_row}")
-
-        print()
-        print("Press Ctrl+C to quit")
+        
+        print("\nPress Ctrl+C to quit")
 
         while True:
             time.sleep(1)  
