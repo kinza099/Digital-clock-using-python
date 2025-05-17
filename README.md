@@ -1,24 +1,66 @@
-# Digital-clock-using-python
-This program displays a clock with the current time. Rather than render numeric Characters directly, the sevseg module,"seven Segment Display Module",generates the drawings for each digit.
+# ⏰ Digital Clock with Seven Segment Display
 
-Let me explain it's code
+## 📝 Overview
 
-Import the necessary libraries sys, time, and sevseg. sys is a module that provides access to some variables used or maintained by the interpreter and functions that interact with the interpreter. time is a module that provides various time-related functions. sevseg is a custom module or library that provides functions for generating seven-segment display patterns.
-Then  starts a try-except block to handle potential exceptions that may occur during the execution of the program. Inside the block, an infinite loop (while True) is initiated to continuously update and display the digital clock.
+This Python project simulates a digital clock using a seven-segment style text output. The clock displays the current system time in the format HH:MM:SS and updates every second using a custom `sevseg` module for rendering digits.
 
-Inside the loop:
+---
 
-print('\n' * 60) is used to clear the console output by printing multiple newline characters.
-current_time is set to the current local time using time.localtime().
-The hour, minutes, and seconds are extracted from current_time and converted to strings for display purposes. The % 12 operation is performed on the hour value to display it in a 12-hour format instead of 24-hour format.
-If the hour is '0', it is replaced with '12' to correctly display midnight (12 AM).
-These values are stored in hour, minutes, and seconds variables, respectively.
+## ✨ Features
 
-Then sevseg library is used to obtain the seven-segment display patterns for each digit of the hour, minutes, and seconds. The getSevSegStr() function from the sevseg module is called, passing in the digit value and the desired width (2 in this case) as arguments. The return value is a string representation of the seven-segment display patterns for the digit.
+- 🕒 Displays the current system time in 12-hour format.
+- 🔁 Automatically updates every second.
+- 🔢 Uses a custom seven-segment representation for digits.
+- ❌ Gracefully exits on Ctrl+C.
 
-These strings are then split into individual lines using the splitlines() method and assigned to variables htop_row, hmiddle_row, hbuttom_row, mtop_row, mmiddle_row, mbuttom_row, stop_row, smiddle_row, sbuttom_row for each digit's display pattern.
-AFter that the seven-segment display patterns for the digits of the hour, minutes, and seconds are printed on the console using print() statements. The display patterns are arranged in a formatted manner to mimic a digital clock layout
+---
 
+## 🛠️ Requirements
 
+- 🐍 Python 3.x
 
+Install required modules if not already available:
 
+```bash
+pip install sevseg  # If sevseg is a pip-installable module or ensure `sevseg.py` is in the same directory
+```
+
+> Note: If `sevseg` is a custom module, make sure the `sevseg.py` file is in the same directory as the script.
+
+---
+
+## 📂 Files
+
+- `digital_clock.py`: The main Python script for the clock.
+- `sevseg.py`: A module to generate seven-segment string representations of digits.
+
+---
+
+## 🚀 Usage
+
+Run the script using:
+
+```bash
+python digital_clock.py
+```
+
+- The console will display the current time using a simulated seven-segment display.
+- Press `Ctrl + C` to quit.
+
+---
+
+## 📦 Output Example
+
+![image](https://github.com/user-attachments/assets/7854c984-acf6-41b9-9a67-176a66bdc741)
+
+---
+
+## 👩‍💻 Author
+
+**Code by Kinza**
+
+---
+
+## 📜 License
+
+This project is open-source and free to use.
